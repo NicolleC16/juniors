@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi To-Do List Interactiva</title>
+    <style>
+        /* Estilos básicos para que se vea bien */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+            background-color: #f4f4f9;
+        }
+
+        .contenedor {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Clase para el "chulito" o tarea completada */
+        .completada {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        li {
+            list-style: none;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        span {
+            cursor: pointer;
+            flex-grow: 1;
+        }
+
+        .btn-eliminar {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-eliminar:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Lista de Tareas</h1>
+        <input type="text" id="tareaInput" placeholder="¿Qué tienes pendiente?">
+        <button id="btnAgregar">Agregar</button>
+
+        <ul id="listaTareas">
+            </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
